@@ -2,6 +2,210 @@
 // bootswatch.less
 // http://bootswatch.com/
 
-//body {
-//	padding-top: 60px;
-//}
+body {
+padding-top: 60px;
+}
+
+// Bootswatch.less
+// Swatch: United
+// Version: 2.1.0
+// -----------------------------------------------------
+
+// TYPOGRAPHY
+// -----------------------------------------------------
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
+// SCAFFOLDING
+// -----------------------------------------------------
+
+// NAVBAR
+// -----------------------------------------------------
+
+.navbar {
+
+  .nav > li > a {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+
+    &:hover {
+      border-left: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .nav > .active > a,
+  .nav > .active > a:hover {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .divider-vertical {
+    background-color: inherit;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar-text {
+    padding: 9px 10px 11px;
+    line-height: 19px;
+    color: @white;
+  }
+
+  .navbar-search .search-query {
+    margin-bottom: 3px;
+    border: 1px solid darken(@navbarBackground, 15%);
+  }
+}
+
+@media (max-width: @navbarCollapseWidth) {
+
+  .navbar .nav-collapse {
+
+    .nav li > a {
+      color: @white;
+      border-left: 0px solid @orange;
+      border-right: 0px solid @orange;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.3) !important;
+        background-image: none;
+      }
+    }
+
+    .navbar-form,
+    .navbar-search {
+      border-top: 0px solid @orange;
+      border-bottom: 0px solid @orange;
+      .box-shadow(none);
+    }
+
+    .nav-header {
+      color: @grayLighter;
+    }
+  }
+}
+
+// NAV
+// -----------------------------------------------------
+
+.nav-tabs .open .dropdown-toggle,
+.nav-pills .open .dropdown-toggle,
+.nav > li.dropdown.open.active > a:hover {
+  border-right: 1px solid #C03D14;
+  border-left: 1px solid #E6633A;
+}
+
+// BUTTONS
+// -----------------------------------------------------
+
+.btn-primary {
+  .buttonBackground(lighten(@btnPrimaryBackground, 15%), @btnPrimaryBackground);
+}
+
+.btn-warning {
+  .buttonBackground(lighten(@yellow, 15%), @yellow);
+}
+
+// TABLES
+// -----------------------------------------------------
+
+// FORMS
+// -----------------------------------------------------
+
+// DROPDOWNS
+// -----------------------------------------------------
+
+// ALERTS, LABELS, BADGES
+// -----------------------------------------------------
+
+.alert {
+  text-shadow: none;
+}
+
+// MISC
+// -----------------------------------------------------
+
+.hero-unit {
+    border: 1px solid rgba(0,0,0,.05);
+    .box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
+
+  h1 {
+    line-height: 1.6em;
+  }
+}
+
+/* Sidenav for Docs
+-------------------------------------------------- */
+
+/* prevent column from collapsing when affixing */
+.span3 {
+  min-height: 1px;
+}
+
+.sidenav {
+  width: 228px;
+  margin: 30px 0 0;
+  padding: 0;
+  background-color: #fff;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+          box-shadow: 0 1px 4px rgba(0,0,0,.065);
+}
+.sidenav > li > a {
+  display: block;
+  *width: 190px;
+  margin: 0 0 -1px;
+  padding: 8px 14px;
+  border: 1px solid #e5e5e5;
+}
+.sidenav > li:first-child > a {
+  -webkit-border-radius: 6px 6px 0 0;
+     -moz-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
+}
+.sidenav > li:last-child > a {
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+}
+.sidenav > .active > a {
+  position: relative;
+  z-index: 2;
+  padding: 9px 15px;
+  border: 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+     -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+          box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+}
+/* Chevrons */
+.sidenav .icon-chevron-right {
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+  opacity: .25;
+}
+.sidenav > li > a:hover {
+  background-color: @orange;
+}
+.sidenav a:hover .icon-chevron-right {
+  opacity: .5;
+}
+.sidenav .active .icon-chevron-right,
+.sidenav .active a:hover .icon-chevron-right {
+  background-image: url(@iconSpritePath);
+  opacity: 1;
+}
+.sidenav.affix {
+  top: 40px;
+}
+.sidenav.affix-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 270px;
+}
+
+// MEDIA QUERIES
+// -----------------------------------------------------
+
