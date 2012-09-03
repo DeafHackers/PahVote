@@ -1,4 +1,5 @@
 <div class="hero-unit">
+  <div class="hero-reg">
   <h1>Voter Registration</h1>
   <h2>Register to Vote in your state!</h2>
   <%= form_tag("", :method => "GET", :class => "form-inline") do %>
@@ -6,6 +7,10 @@
     <%= select_tag("state", options_for_select(Guidelines.all.collect {|s| [ s.name, s.state ] })) %>
     <%= submit_tag 'Go', :class=> "btn btn-primary" %>
   <% end %>
+  </div>
+ <div class="hero-logo">
+    <img src="http://www.dallasvoice.com/wp-content/uploads/2012/05/Election-2012-Logo1.jpg" alt="Election 2012 logo" class="election" width="430" />
+  </div>
 </div>
 <div class="row">
   <div class="span12 section-header">
@@ -32,6 +37,16 @@
   <div class="span4">
     <h2>State Guidelines</h2>
     <p>Make sure you checkout the <%= link_to 'guidelines', guidelines_path %> for your state</p>
+  </div>
+</div>
+<br>
+<br>
+<div class="row">
+  <div class="span12 section-header">
+  <h1>PahVote in ASL!</h1>
+  </div>
+  <div class="span12" align="center">
+    <iframe width="903" height="530" src="http://www.youtube.com/embed/4r7wHMg5Yjg" frameborder="0" align="center" allowfullscreen></iframe>
   </div>
 </div>
 

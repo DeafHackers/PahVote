@@ -3,11 +3,16 @@
 // http://bootswatch.com/
 
 body {
-padding-top: 60px;
+    padding-top: 60px;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 a {
   color: @red;
+}
+
+.navbar .brand {
+  font-size:24px;
 }
 
 // Bootswatch.less
@@ -20,6 +25,10 @@ a {
 
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia,"Times New Roman",Times,serif;
+}
+
 // SCAFFOLDING
 // -----------------------------------------------------
 
@@ -28,9 +37,15 @@ a {
 
 .navbar {
 
+    font-family: Georgia,"Times New Roman",Times,serif;
+
+  .navbar .brand {
+    font-size:24px;
+  }
   .nav > li > a {
     border-right: 1px solid rgba(0, 0, 0, 0.2);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
 
     &:hover {
       border-left: 1px solid rgba(0, 0, 0, 0.2);
@@ -129,12 +144,22 @@ a {
 
 .hero-unit {
     border: 1px solid rgba(0,0,0,.05);
-    .box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
+    .box-shadow(inset 0 1px 1px rgba(0,0,0,.08));
+    overflow:auto;
 
   h1 {
     line-height: 1.6em;
+    font-family: Georgia,"Times New Roman",Times,serif;
   }
 }
+  .hero-reg {
+    float:left;
+    margin-right:60px;
+  }
+
+  .hero-logo {
+    float:left;
+  }
 
 /* Sidenav for Docs
 -------------------------------------------------- */
@@ -148,7 +173,7 @@ a {
   width: 228px;
   margin: 30px 0 0;
   padding: 0;
-  background-color: #fff;
+  background-color: @grayLighter;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;
@@ -191,7 +216,7 @@ a {
   opacity: .25;
 }
 .sidenav > li > a:hover {
-  background-color: @grayLighter;
+  background-color: darken(@grayLighter, 5%);
 }
 .sidenav a:hover .icon-chevron-right {
   opacity: .5;
@@ -213,3 +238,83 @@ a {
 // MEDIA QUERIES
 // -----------------------------------------------------
 
+/* Smartphones (portrait) ----------- */
+@media (max-width: 679px) {
+  
+  .hero-unit {
+    padding: 20px;
+
+    h1 {
+      font-size: 45px;
+      line-height:1.2em;
+    }
+  }
+  
+}
+
+/* Desktop large
+------------------------- */
+@media (min-width: 1200px) {
+  .sidenav {
+    width: 258px;
+  }
+}
+
+/* Desktop
+------------------------- */
+@media (max-width: 980px) {
+  /* When affixed, space properly */
+  .sidenav {
+    top: 0;
+    margin-top: 30px;
+    margin-right: 0;
+  }
+}
+
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 980px) {
+  /* Adjust sidenav width */
+  .sidenav {
+    width: 166px;
+    margin-top: 20px;
+  }
+  .sidenav.affix {
+    top: 0;
+  }
+  .hero-logo {
+   text-align:center; 
+   float:none;
+   margin-top:40px;
+  }
+  .hero-reg {
+    float:none;
+  }
+  
+  .hero-unit {
+    padding:40px;
+  }
+}
+
+/* Tablet
+------------------------- */
+@media (max-width: 768px) {
+  /* Sidenav */
+  .sidenav {
+    width: auto;
+    margin-bottom: 20px;
+  }
+  .sidenav.affix {
+    position: static;
+    width: auto;
+    top: 0;
+  }
+
+  .hero-logo {
+    display:none;
+  }
+
+  .hero-unit {
+    padding:30px;
+  }
+}
