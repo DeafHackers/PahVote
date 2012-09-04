@@ -168,8 +168,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-unit {
     border: 1px solid rgba(0,0,0,.2);
     .box-shadow(inset 0 1px 1px 1px  rgba(0,0,0,.15));
-    overflow:auto;
-    background:#c9c9c9;
+    background:#e9e9e9;
 
     select {
       border: 1px solid #777;
@@ -185,30 +184,34 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Georgia,"Times New Roman",Times,serif;
   }
 }
+  .hero-logo {
+   text-align:center; 
+   float:none;
+   margin-top:40px;
+  }
+  .hero-reg {
+    float:none;
+  }
+  
+  .hero-unit {
+    padding:40px;
+  }
     label, input, button, select, textarea {
       font-size: 16px;
     }
 
-  .hero-reg {
-    float:left;
-    margin-right:60px;
-  }
-
-  .hero-logo {
-    float:left;
-  }
-
 .box {
-  background-color: #d1d1d1 !important;
+  background-color: #e9e9e9;
   padding:10px;
+  margin-bottom:10px;
   box-shadow:inset 0 1px 1px 1px rgba(0, 0, 0, 0.15);
   border-radius:10px;
   border:1px solid rgba(0, 0, 0, 0.2);
 }
 
 .smallbox {
-  width: 344px !important;
-  height: 260px;
+  width: 275px;
+  height: 305px;
 }
 
 /* Sidenav for Docs
@@ -291,9 +294,27 @@ h1, h2, h3, h4, h5, h6 {
 /* Desktop large
 ------------------------- */
 @media (min-width: 1200px) {
+  .hero-unit {
+    overflow:auto;
+  }
+
+  .hero-reg {
+    float:left;
+    margin-right:60px;
+  }
+
+  .hero-logo {
+    float:left;
+  }
   .sidenav {
     width: 258px;
   }
+
+  .smallbox {
+    width: 344px;
+    height: 260px;
+  }
+
 }
 
 /* Desktop
@@ -330,6 +351,10 @@ h1, h2, h3, h4, h5, h6 {
   .hero-unit {
     padding:40px;
   }
+.smallbox {
+  width: 205px;
+  height: 350px;
+}
 }
 
 /* Tablet
@@ -352,5 +377,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .hero-unit {
     padding:30px;
+  }
+
+  .box {
+    width:auto;
+    height:auto;
   }
 }
