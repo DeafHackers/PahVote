@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/jkriss/stateface-rails.git
+  revision: 8e720cdb95d85e5a134fdaa18822ca07094f496f
+  specs:
+    stateface-rails (0.0.9)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -193,7 +199,6 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.6)
-    stateface-rails (0.0.9)
     therubyracer (0.10.1)
       libv8 (~> 3.3.10)
     thor (0.15.4)
@@ -239,7 +244,7 @@ DEPENDENCIES
   simple_form
   simplecov
   sqlite3
-  stateface-rails
+  stateface-rails!
   therubyracer
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
