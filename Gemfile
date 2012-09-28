@@ -14,6 +14,7 @@ gem 'prawn'
 gem 'prawn-fillform'
 gem 'rails_admin', '~> 0.0.5'
 gem 'simple_form'
+gem 'stateface-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

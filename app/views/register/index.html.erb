@@ -2,11 +2,12 @@
   <h1>Register to Vote</h1>
 </div>
 <div class="row">
-  <div class="span11">
-    <%= form_tag(register_index_path, :method => "GET", :class => "well form-inline") do %>
-      <%= label_tag 'Select a state' %>
-      <%= select_tag("state", options_for_select(Guidelines.all.collect {|s| [ s.name, s.state ] })) %>
-      <%= submit_tag 'Go', :class=> "btn btn-primary" %>
+  <div class="span12">
+    <% @states.each do |state| %>
+      <div class="state_tile">
+        <h2 class="stateface_chart"><%=link_to stateface_tag(state.state), register_new_path(state.state) %></h2>
+        <p><%= link_to state.name, register_new_path(state.state) %></p>
+      </div>
     <% end %>
   </div>
 </div>

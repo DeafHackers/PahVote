@@ -1,9 +1,6 @@
 class RegisterController < ApplicationController
   def index
-    unless params[:state].blank?
-      redirect_to register_new_path(params[:state])
-    end
-
+    @states = Guidelines.select("name, state")
   end
 
   def new
