@@ -1,112 +1,37 @@
 <div class="hero-unit">
-  <div class="hero-reg">
-  <h1>Voter Registration</h1>
-  <h2>Register to Vote in your state!</h2>
+  <h1><%= t :voter_registration %></h1>
+  <h2><%= t :register_to_vote_in_state %></h2>
   <%= form_tag("", :method => "GET", :class => "form-inline") do %>
-    <%= label_tag 'Select a state' %>
+    <%= label_tag t :select_a_state %>
     <%= select_tag("state", options_for_select(Guidelines.all.collect {|s| [ s.name, s.state ] })) %>
-    <%= submit_tag 'Go', :class=> "btn btn-primary" %>
+    <%= submit_tag (t :go).titleize, :class=> "btn btn-primary" %>
   <% end %>
-  </div>
- <div class="hero-logo">
-    <img src="/images/election2012.png" alt="Election 2012 logo" class="election" width="430" />
-  </div>
 </div>
 <div class="row">
   <div class="span12 section-header">
-    <h1>About</h1>
+    <h1><%= (t :about).titleize %></h1>
   </div>
 </div>
 <div class="row">
-  <div class="span4 box smallbox">
-    <h2>Vote</h2>
-    <p>PahVote’s goal is to empower Deaf and Hard of Hearing Americans to
-       become a part of our nation’s political processes.<br> <br> We hope to achieve this 
-       by simplifying the process of becoming a voter, while also offering 
-       explanations in American Sign Language for concepts related to voting. 
-       </p>
+  <div class="span4">
+    <h2><%= (t :vote).titleize %></h2>
+    <p>We need more Americans to have a say in their government, not just the special interests.
+    That's why we should be taking down roadblocks to voting.
+    We believe in an America where everybody can make their voices heard.</p>
   </div>
-  <div class="span4 box smallbox">
-    <h2>How It Works</h2>
+  <div class="span4">
+    <h2><%= (t :how_it_works).titleize %></h2>
     <ol>
       <li>Choose a state</li>
       <li>Read the guidelines for the state</li>
       <li>Fill out the form</li>
-      <li>Download your voter registration form</li>
+      <li>Download and print your voter registration form</li>
       <li>Add a stamp and mail in your form</li>
     </ol>
   </div>
-  <div class="span4 box smallbox">
-    <h2>State Guidelines</h2>
+  <div class="span4">
+    <h2><%= (t :state_guidelines).titleize %></h2>
     <p>Make sure you checkout the <%= link_to 'guidelines', guidelines_path %> for your state</p>
   </div>
 </div>
-<br>
-<div class="row">
-  <div class="span12 section-header">
-  <h1>PahVote in ASL!</h1>
-  </div>
-  <div class="span12 box largebox" align="center">
-    <iframe width="1150" height="647" src="http://www.youtube.com/embed/oAqAwc5nvwQ" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
-<br>
-<div class="row">
-  <div class="span12 section-header">
-    <h1>Resources for becoming a better American</h1>
-  </div>
-</div>
-<div class="row">
-  <div class="span6 box mediumbox">
-    <h3>1. Watch and then share this video</h3>
-    <div align="center">
-      <iframe width="545" height="307" src="http://www.youtube.com/embed/xLvq_XL6fSs" frameborder="0" allowfullscreen></iframe>
-  </div>
-    <h3>2. Read these articles</h3>
-    <h4> <ul>
-        <li><a href="http://2012-presidential-candidates.findthedata.org/compare/1-5/Barack-Obama-vs-Mitt-Romney" target="blank" >Obama vs. Romney Key Details</a></li>
-        <li><a href="http://www.politifact.com/personalities/barack-obama/" target="blank">Barack Obama Truth-O-Meter</a></li>
-        <li><a href="http://www.politifact.com/personalities/mitt-romney/" target="blank">Mitt Romney Truth-O-Meter</a></li>
-        <li><a href="http://www.opensecrets.org/pres12/index.php" target="blank">2012 Presidential Race Financial Information</a></li>
-        <li><a href="http://www.opensecrets.org/resources/dollarocracy/" target="blank">Top 10 Things Every Voter Should Know</a></li>
-  </ul></h4>
-    <h3>3. Share!</h3>
-    <div class="fb-like" data-href="http://pahvote.herokuapp.com" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Pah, get registered to vote at #PahVote!" data-size="large">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  </div>
-  <div class="span6 box mediumbox links">
-    <h2>Links</h2>
-    <h3> <ul>
-        <li><a href="http://www.npr.org/" target="blank">National Public Radio</a></li>
-        <li><a href="http://www.realclearpolitics.com/" target="blank">Real Clear Politics</a></li>
-        <li><a href="http://www.opencongress.org/" target="blank">OpenCongress</a></li>
-        <li><a href="http://www.govtrack.us/" target="blank">GovTrack</a></li>
-        <li><a href="http://factcheck.org/" target="blank">FactCheck</a></li>
-        <li><a href="http://www.findthedata.org/" target="blank">Find the Data</a></li>
-        <li><a href="http://www.politifact.com/" target="blank">PolitiFact</a></li>
-        <li><a href="http://www.opensecrets.org/index.php" target="blank">OpenSecrets</a></li>
-  </ul></h3>
-  <h2>Political Twitterati</h2>
-  <a href="https://twitter.com/pahvote" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @pahvote</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  <a href="https://twitter.com/fivethirtyeight" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @fivethirtyeight</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  <a href="https://twitter.com/ezraklein" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @ezraklein</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  <a href="https://twitter.com/gallupnews" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @gallupnews</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  <a href="https://twitter.com/politico2012" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @politico2012</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  <a href="https://twitter.com/politifact" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @politifact</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  </div>
-</div>
-<div class="row">
-  <div class="span12 section-header">
-    <h1>Sponsored by..</h1>
-  </div>
-  <div id="logo" align="center">
-    <a href="http://convorelay.com" target="blank"><img src="/images/Convo-Logo.png" alt="Convo Logo" /></a>
-  </div>
-</div>
+

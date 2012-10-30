@@ -347,6 +347,20 @@
     - slug: url
       body: http://www.sos.ca.gov/elections/elections.htm
       title: URL
+    - slug: online
+      body: true
+    - slug: online_requirements
+      body: "<ul>
+            <li>Have a California Driver's License or ID card issued by the state of California</li>
+            <li>The last four digits of your social security number and date of birth</li>
+            <li>If you do not have a California driver license or California identification card, you can still register to vote.</li>
+            <li>Be 18 or older at the time of the next election</li>
+            <li>Be a United States citizen</li>
+            <li>A resident of California</li>
+            <li>Not in prison or on parole for the conviction of a felony.</li>
+            </ul>"
+    - slug: online_url
+      body: "https://rtv.sos.ca.gov/elections/register-to-vote/"
   - slug: CO
     body:
     title: Colorado
@@ -2126,14 +2140,14 @@
         <br/>
         <p>You may only vote absentee if you fall into <strong>ANY ONE</strong> of the following categories:</p>
         <ul>
-        <li> You plan to be absent on te day of the election from the city, town, or unincorporated place in which you are registered to vote; or</li>
+        <li> You plan to be absent on the day of the election from the city, town, or unincorporated place in which you are registered to vote; or</li>
         <li> You cannot appear in public on Election Day because of observance of a religious commitment</li>
         <li> You are unable to vote in person due to a disability; or</li>
-        <li> You cannot appear at any time during polling hours at your polling place because an employment obligation requires you to remain physically at work or to be in transit to or from work from the time the polls open until after the time the plls close</li>
+        <li> You cannot appear at any time during polling hours at your polling place because an employment obligation requires you to remain physically at work or to be in transit to or from work from the time the polls open until after the time the polls close</li>
         </ul>"
       title: Early Voting
     - slug: url
-      body: http://www.sos.nh.gov/electionsnew.html
+      body: http://sos.nh.gov/VoteNH.aspx
       title: URL
     - slug: online
       body: false
