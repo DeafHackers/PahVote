@@ -13,6 +13,7 @@ en:
   terms_of_use: "Terms of use"
   vote: "vote"
   voter_registration: "Voter Registration"
+  pahvote: "PahVote"
 
   activemodel:
     attributes:
