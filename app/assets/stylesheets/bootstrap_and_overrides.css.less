@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Headland+One);
 @import url(http://fonts.googleapis.com/css?family=Istok+Web);
 body {
-  padding-top: 66px !important;
+  padding-top: 0px !important;
 }
 
 @import "twitter/bootstrap/responsive";
@@ -42,12 +42,12 @@ h6 {
 }
 
 h1 {
-  color: #122549;
+  color: @blueDark;
   font-size: 32px;
 }
 
 h2 {
-  color: #A31B20;
+  color: @red;
   font-size: 22px;
 }
 
@@ -59,14 +59,14 @@ h2 {
   font-family: 'Headland One', "Times New Roman", Times, serif;
   text-transform: none;
   font-size: 35px;
-  padding: 15px 20px 21px;
+  padding: 16px 20px 20px;
   color: #122549;
 }
 
 .navbar .nav > li > a {
   font-family: 'Istok Web', sans-serif;
   font-size: 24px;
-  padding: 23px 15px 23px;
+  padding: 24px 15px 22px;
   color: #A31B20;
 }
 
@@ -76,10 +76,24 @@ h2 {
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
 }
 
+.convo {
+  float:right;
+  margin-top:13px;
+}
+
 .hero-unit {
   h1 {
     color: #1A3569;
   }
+}
+
+.hero-logo {
+ text-align:center; 
+ float:none;
+ margin-top:40px;
+}
+.hero-reg {
+  float:none;
 }
 
 .title {
@@ -91,14 +105,10 @@ h2 {
   margin-bottom:10px;
 }
 
-.first li {
+.rcolumn li {
   line-height: 30px;
   font-size: 20px;
-}
-
-.second li {
-  line-height: 30px;
-  font-size: 20px;
+  list-style: none;
 }
 
 /* Sidenav for Docs
@@ -156,7 +166,8 @@ h2 {
   opacity: .25;
 }
 .sidenav > li > a:hover {
-  background-color: @beige;
+  background-color: @red;
+  color:white;
 }
 .sidenav a:hover .icon-chevron-right {
   opacity: .5;
@@ -167,13 +178,23 @@ h2 {
   opacity: 1;
 }
 .sidenav.affix {
-  top: 40px;
+  top: 60px;
 }
 .sidenav.affix-bottom {
   position: absolute;
   top: auto;
   bottom: 270px;
 }
+
+.double_column_list li {float:left;width:50%;list-style:none;color:#777;}
+.friends { 
+  a {
+    color: #444;
+    font-weight:bold;
+    }
+  font-size:24px;
+  }
+.foot {float:right;}
 
 /* Responsive
 -------------------------------------------------- */
@@ -182,7 +203,6 @@ h2 {
 ------------------------- */
 @media (min-width: 1200px) {
   body {
-    font-size:24px;
   }
   
   .span9 li {
@@ -200,6 +220,24 @@ h2 {
     font-size: 30px;
   }
   
+  .hero-unit {
+    overflow: auto;
+    padding: 40px 60px;
+  }
+  
+  .hero-reg {
+    float:left;
+    margin-right:30px;
+  }
+  
+  .hero-logo {
+    float:left;
+  }
+  
+  .front {
+    font-size: 24px;
+  }
+  
   .sidenav {
     width: 258px;
   }
@@ -208,14 +246,18 @@ h2 {
     line-height: 30px;
   }
   
-  .first li {
+  .rcolumn li {
     line-height: 40px;
     font-size: 30px;
+  }  
+  
+  label, input, button, select, textarea {
+    font-size: 22px;
   }
   
-  .second li {
-    line-height: 40px;
-    font-size: 30px;
+  select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    font-size:20px;
+    color: #666;
   }
 }
 

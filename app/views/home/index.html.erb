@@ -1,4 +1,5 @@
 <div class="hero-unit">
+  <div class="hero-reg">
   <h1><%= t :voter_registration %></h1>
   <h2><%= t :register_to_vote_in_state %></h2>
   <%= form_tag("", :method => "GET", :class => "form-inline") do %>
@@ -7,8 +8,12 @@
     <%= submit_tag (t :go).titleize, :class=> "btn btn-primary" %>
   <% end %>
 </div>
+<div class="hero-logo">
+  <img src="http://pahvote.com/images/election2012.png" alt="Election 2012 logo" class="election" width="430" />
+</div>
+</div>
 <div class="row">
-  <div class="span4">
+  <div class="span4 front">
     <h1><%= (t :vote).titleize %></h1>
     <p>PahVote’s goal is to empower Deaf and Hard of Hearing Americans to
     become a part of our nation’s political processes.<br> <br> We hope to achieve this 
@@ -16,7 +21,7 @@
     explanations in American Sign Language for concepts related to voting. 
     </p>
   </div>
-  <div class="span4 works">
+  <div class="span4 works front">
     <h1><%= (t :how_it_works).titleize %></h1>
     <ol>
       <li>Choose a state</li>
@@ -26,7 +31,7 @@
       <li>Add a stamp and mail in your form</li>
     </ol>
   </div>
-  <div class="span4">
+  <div class="span4 front">
     <h1><%= (t :state_guidelines).titleize %></h1>
     <p>Make sure you check out the <%= link_to 'guidelines', guidelines_path %> for your state</p>
   </div>
@@ -36,7 +41,7 @@
   <h1><%= (t :pahvoteasl) %></h1>
   </div>
   <div class="span12" align="center">
-    <iframe width="1150" height="647" src="http://www.youtube.com/embed/oAqAwc5nvwQ" frameborder="0" allowfullscreen></iframe>
+    <iframe width="853" height="480" src="http://www.youtube.com/embed/oAqAwc5nvwQ" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 <br>
@@ -46,12 +51,12 @@
   </div>
 </div>
 <div class="row">
-  <div class="span6 first">
-    <h2>1 Watch and then share this video</h2>
+  <div class="span6 rcolumn">
+    <h2>1. Watch and share this video</h2>
     <div align="center">
       <iframe width="545" height="307" src="http://www.youtube.com/embed/xLvq_XL6fSs" frameborder="0" allowfullscreen></iframe>
   </div>
-    <h2>2 Read these articles</h2>
+    <h2>2. Read these articles</h2>
     <ul>
         <li><a href="http://2012-presidential-candidates.findthedata.org/compare/1-5/Barack-Obama-vs-Mitt-Romney" target="blank" >Obama vs. Romney Key Details</a></li>
         <li><a href="http://www.politifact.com/personalities/barack-obama/" target="blank">Barack Obama Truth-O-Meter</a></li>
@@ -59,12 +64,12 @@
         <li><a href="http://www.opensecrets.org/pres12/index.php" target="blank">2012 Presidential Race Financial Information</a></li>
         <li><a href="http://www.opensecrets.org/resources/dollarocracy/" target="blank">Top 10 Things Every Voter Should Know</a></li>
   </ul>
-    <h2>3 Share!</h2>
+    <h2>3. Share!</h2>
     <div class="fb-like" data-href="http://pahvote.herokuapp.com" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
     <a href="https://twitter.com/share" class="twitter-share-button" data-text="Pah, get registered to vote at #PahVote!" data-size="large">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </div>
-  <div class="span6 second">
+  <div class="span6 rcolumn">
     <h2>Links</h2>
     <ul>
         <li><a href="http://www.npr.org/" target="blank">National Public Radio</a></li>
