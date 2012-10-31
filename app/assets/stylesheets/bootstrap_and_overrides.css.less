@@ -1,6 +1,8 @@
-@import "twitter/bootstrap/bootstrap";
+@import "http://bootswatch.com/journal/bootstrap.min.css";
+@import url(http://fonts.googleapis.com/css?family=Headland+One);
+@import url(http://fonts.googleapis.com/css?family=Istok+Web);
 body {
-  padding-top: 60px !important;
+  padding-top: 66px !important;
 }
 
 @import "twitter/bootstrap/responsive";
@@ -23,116 +25,11 @@ body {
 @import "variables";
 body {
   margin: 0;
-  font-family: 'Crimson Text', "Times New Roman", Times, serif;
-  font-size: 17px;
-  line-height: 1.3em;
+  font-family: 'Istok Web', sans-serif;
+  font-size: 20px;
   color: @grey;
-  background-color: @beige;
+  line-height: 30px;
 }
-
-@linkColor: @blueDark;
-@dropdownLinkColor: @blueDark;
-
-.nav-list > .active > a,
-.nav-list > .active > a:hover {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: @blueDark;
-}
-
-.nav-pills > .active > a,
-.nav-pills > .active > a:hover {
-  color: #ffffff;
-  background-color: @blueDark;
-}
-
-.nav-tabs .dropdown-toggle .caret,
-.nav-pills .dropdown-toggle .caret {
-  border-top-color: @blueDark;
-  border-bottom-color: @blueDark;
-  margin-top: 6px;
-}
-.navbar-inner {
-  min-height: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #fff !important;
-  background-repeat: repeat-x;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
-  -moz-box-shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
-  border-bottom: 3px solid @beigeLight;
-  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.25), 0 0 0 rgba(0, 0, 0, 0.1) inset;
-}
-
-.navbar {
-  color: @grey;
-}
-
-@navbarBrandColor: @grey;
-@navbarLinkColor: @blueDark;
-
-.navbar .brand {
-  font-weight: bold;
-  line-height: 1em;
-  padding: 8px 10px 13px;
-  padding: 15px 10px 5px \0;
-}
-
-.navbar .nav > li > a {
-  float: none;
-  padding: 11px 10px 9px;
-  line-height: 19px;
-  color: @blueDark;
-  text-decoration: none;
-}
-.navbar .nav > li > a:hover {
-  background-color: transparent;
-  color: #c50001;
-  text-decoration: none;
-}
-
-.navbar .nav > li > a:hover {
-  background-color: transparent;
-  color: #c50001;
-  text-decoration: none;
-}
-
-@navbarLinkBackgroundActive: @beige;
-
-.navbar .divider-vertical {
-  height: 40px;
-  width: 1px;
-  margin: 0 9px;
-  overflow: hidden;
-  background-color: @beige;
-  border-right: 1px solid @beige;
-}
-
-.hero-unit {
-  margin-top: 50px;
-  padding: 20px 45px 30px;
-  margin-bottom: 30px;
-  background-color: #ffffff;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-}
-
-.well,
-.hero-unit {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  border: 1px solid #D4D4D4;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 5px;
-  background-color: #ffffff;
-}
-
 
 h1,
 h2,
@@ -141,213 +38,67 @@ h4,
 h5,
 h6 {
   line-height: 2em;
-  color: @grey;
-}
-.navbar .nav > li.active > a,
-.navbar .open .dropdown-toggle {
-  color: @greyLight;
-}
-.navbar .nav li.dropdown.active > .dropdown-toggle,
-.navbar .nav li.dropdown.open > .dropdown-toggle,
-.navbar .nav li.dropdown.active.open > .dropdown-toggle {
-  color: @greyLight;
-}
-.navbar .nav li.dropdown .dropdown-toggle .caret,
-.navbar .nav li.dropdown.open .caret {
-  border-top-color: @blueDark;
-  opacity: 1;
+  font-family: 'Headland One', "Times New Roman", Times, serif;
 }
 
-.navbar .nav-collapse.in .nav li > a {
-  color: @blueDark;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  font-weight: normal;
-}
-nav-tabs li.active > a,
-.nav-tabs li.active > a:hover {
-  color: @grey;
-  background-color: @beige;
-}
-.nav-pills li > a:hover {
-  background-color: @beige;
-}
-.nav-pills li.active > a,
-.nav-pills li.active > a:hover {
-  color: @grey;
-  background-color: @beige;
-}
-.nav-pills .open .dropdown-toggle {
-  background-color: transparent;
-  color: @blueDark;
-  border-left: 1px solid whiteSmoke;
-  border-right: 1px solid #E5E5E5;
-}
-.nav-pills li.dropdown.open .dropdown-toggle .caret {
-  border-top-color: @blueDark;
-}
-.nav-list li.active > a,
-.nav-list li.active > a:hover {
-  color: @grey;
-}
-.pagination li.active > a:hover {
-  color: @grey;
-  background-color: #F5F5F5;
-}
-div.subnav {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-      font-size: 15px;
-
-  background-color: @tan;
-  background-image: none;
-}
-div.subnav .nav {
-  padding: 0;
-}
-div.subnav .nav > li.active > a,
-div.subnav .nav > li:active > a {
-  color: @greyLight;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  background-color: @beige;
-}
-div.subnav .nav > li > a:hover,
-div.subnav .nav > li.active > a:hover,
-div.subnav .nav > li:active > a:hover {
-  color: #c50001;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  background-color: transparent;
-}
-div.subnav-fixed {
-  left: auto;
-  width: 100%;
-  margin: 0;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border: 1px solid #E5E5E5;
-}
-div.subnav-fixed .nav {
-    margin: 0 auto;
-    padding: 0 1px;
-    width: 938px;
+h1 {
+  color: #122549;
+  font-size: 32px;
 }
 
-
-.navbar .nav-collapse.in .nav li > a {
-  color: @blueDark;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  font-weight: normal;
-}
-.nav-tabs li.active > a,
-.nav-tabs li.active > a:hover {
-  color: @grey;
-  background-color: @beige;
-}
-.nav-pills li > a:hover {
-  background-color: @beige;
-}
-.nav-pills li.active > a,
-.nav-pills li.active > a:hover {
-  color: @grey;
-  background-color: @beige;
-}
-.nav-pills .open .dropdown-toggle {
-  background-color: transparent;
-  color: @blueDark;
-  border-left: 1px solid whiteSmoke;
-  border-right: 1px solid #E5E5E5;
-}
-.nav-pills li.dropdown.open .dropdown-toggle .caret {
-  border-top-color: @blueDark;
-}
-.nav-list li.active > a,
-.nav-list li.active > a:hover {
-  color: @grey;
-}
-.pagination li.active > a:hover {
-  color: @grey;
-  background-color: #F5F5F5;
-}
-.btn-primary {
-  background-color: @blueDark;
-  background-image: -moz-linear-gradient(top, @blue, @blueDark);
-  background-image: -ms-linear-gradient(top, @blue, @blueDark);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@blue), to(@blueDark));
-  background-image: -webkit-linear-gradient(top, @blue, @blueDark);
-  background-image: -o-linear-gradient(top, @blue, @blueDark);
-  background-image: linear-gradient(top, @blue, @blueDark);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cf0001', endColorstr='@blueDark', GradientType=0);
-  border-color: @blueDark @blueDark @blue;
-  *background-color: @blueDark;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-}
-.btn-primary:active,
-.btn-primary.active,
-.btn-primary.disabled,
-.btn-primary[disabled] {
-  background-color: @blueDark;
-  *background-color: @blueDark;
-}
-.btn-primary:active,
-.btn-primary.active {
-  background-color: @blueDark;
-}
-.btn-primary[disabled] {
-  background-color: @blueDark;
-  *background-color: @blueDark;
-}
-.btn-primary:active,
-.btn-primary.active {
-  background-color: @blueDark;
-}
-input,
-textarea,
-select {
-  color: @grey;
+h2 {
+  color: #A31B20;
+  font-size: 22px;
 }
 
-.modal-footer {
-  background-color: @beige;
-}
-label,
-input,
-button,
-select,
-textarea {
-  font-size: 17px;
-  font-weight: normal;
-  line-height: 1.3em;
-}
-input,
-button,
-select,
-textarea {
-  font-family: 'Crimson Text', "Times New Roman", Times, serif;
+.navbar .navbar-inner {
+  border-bottom:none;
 }
 
-.nav-list > .active > a,
-.nav-list > .active > a:hover {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: @tan;
+.navbar .brand {
+  font-family: 'Headland One', "Times New Roman", Times, serif;
+  text-transform: none;
+  font-size: 35px;
+  padding: 15px 20px 21px;
+  color: #122549;
+}
+
+.navbar .nav > li > a {
+  font-family: 'Istok Web', sans-serif;
+  font-size: 24px;
+  padding: 23px 15px 23px;
+  color: #A31B20;
+}
+
+.navbar .nav > li > a:hover {
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+}
+
+.hero-unit {
+  h1 {
+    color: #1A3569;
+  }
+}
+
+.title {
+  text-align: center;
+}
+
+.works li {
+  line-height: 30px;
+  margin-bottom:10px;
+}
+
+.first li {
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.second li {
+  line-height: 30px;
+  font-size: 20px;
 }
 
 /* Sidenav for Docs
@@ -430,8 +181,41 @@ textarea {
 /* Desktop large
 ------------------------- */
 @media (min-width: 1200px) {
+  body {
+    font-size:24px;
+  }
+  
+  .span9 li {
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    color: #122549;
+    font-size: 40px;
+  }
+  
+  h2 {
+    color: #A31B20;
+    font-size: 30px;
+  }
+  
   .sidenav {
     width: 258px;
+  }
+  
+  .works li {
+    line-height: 30px;
+  }
+  
+  .first li {
+    line-height: 40px;
+    font-size: 30px;
+  }
+  
+  .second li {
+    line-height: 40px;
+    font-size: 30px;
   }
 }
 
