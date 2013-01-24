@@ -1,4 +1,7 @@
-#Voter Registration
+#Voter Registration [![Build Status](https://secure.travis-ci.org/democrats/voter-registration.png?branch=master)][travis]
+[travis]: http://travis-ci.org/democrats/voter-registration
+
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/democrats/voter-registration)
 
 ##About
 
@@ -39,6 +42,8 @@ You can setup a Heroku account for free [https://devcenter.heroku.com/articles/q
 
     heroku create
     heroku addons:add sendgrid:starter #Free addon used for devise emails
+    rake secret # to generate a secret token
+    heroku config:set SECRET_TOKEN={{your secret token}}
     git push heroku master
     heroku run rake db:migrate
     heroku run rake db:seed
@@ -51,60 +56,17 @@ We use RSpec for tests: `bundle exec rake spec`
 We use [rails_admin](https://www.github.com/sferik/rails_admin) to manage the State Guidelines
 Go to "/admin" to login and manage the Guidelines
 
-The default email: admin@example.com    
-The default password: p@ssw0rd   
+The default email: admin@example.com
+The default password: p@ssw0rd
 
 ## Supported Ruby Versions
 This application aims to support and is tested against the following Ruby
 implementations:
 
-* Ruby 1.9.2
 * Ruby 1.9.3
 
 ## Contributing
-In the spirit of [free software][free-sw], **everyone** is encouraged to help
-improve this project.
-
-[free-sw]: http://www.fsf.org/licensing/essays/free-sw.html
-
-Here are some ways *you* can contribute:
-
-* by using alpha, beta, and prerelease versions
-* by reporting bugs
-* by suggesting new features
-* by [translating to a new language][locales]
-* by writing or editing documentation
-* by writing specifications
-* by writing code (**no patch is too small**: fix typos, add comments, clean up
-  inconsistent whitespace)
-* by refactoring code
-* by closing [issues][]
-* by reviewing patches
-
-[locales]: https://github.com/democrats/voter-registration/tree/master/config/locales
-[issues]: https://github.com/democrats/voter-registration/issues
-
-## Submitting an Issue
-We use the [GitHub issue tracker][issues] to track bugs and features. Before
-submitting a bug report or feature request, check to make sure it hasn't
-already been submitted. You can indicate support for an existing issue by
-voting it up. When submitting a bug report, please include a [Gist][] that
-includes a stack trace and any details that may be necessary to reproduce the
-bug, including your gem version, Ruby version, and operating system. Ideally, a
-bug report should include a pull request with failing specs.
-
-[gist]: https://gist.github.com/
-
-## Submitting a Pull Request
-1. Fork the project.
-2. Create a topic branch. (`git checkout -b my_awesome_branch`)
-3. Implement your feature or bug fix.
-4. Add tests for your feature or bug fix.
-5. Run `bundle exec rake spec`. If your changes are not 100% covered, go back
-   to step 4.
-6. Commit your changes. (`git commit -am "Added some cool things"`)
-7. Push to the branch (`git push origin my_awesome_branch`)
-8. Submit a [pull request](https://help.github.com/articles/using-pull-requests/)
+Check out [contributing](https://github.com/democrats/voter-registration/blob/master/CONTRIBUTING.mkd) for ways that you can contribute
 
 ## Documentation
 

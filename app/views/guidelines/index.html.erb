@@ -3,25 +3,12 @@
 </div>
 <p>Choose a state below to see specific voter registration guidelines.</p>
 <div class="row">
-  <div class="span4">
-    <ul>
-      <% @states[0..16].each do |state| %>
-        <li><%= link_to state.name, guideline_path(state.state) %></li>
-      <% end %>
-    </ul>
-  </div>
-  <div class="span4">
-    <ul>
-      <% @states[17..33].each do |state| %>
-        <li><%= link_to state.name, guideline_path(state.state) %></li>
-      <% end %>
-    </ul>
-  </div>
-  <div class="span4">
-    <ul>
-      <% @states[34..50].each do |state| %>
-        <li><%= link_to state.name, guideline_path(state.state) %></li>
-      <% end %>
-    </ul>
+  <div class="span12">
+    <% @states.each do |state| %>
+      <div class="state_tile">
+        <h2 class="stateface_chart"><%=link_to stateface_tag(state.state), guideline_path(state.state) %></h2>
+        <p><%= link_to state.name, guideline_path(state.state) %></p>
+      </div>
+    <% end %>
   </div>
 </div>

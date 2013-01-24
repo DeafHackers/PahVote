@@ -14,6 +14,7 @@ gem 'prawn'
 gem 'prawn-fillform'
 gem 'rails_admin', '~> 0.0.5'
 gem 'simple_form'
+gem 'stateface-rails', :git => "git://github.com/jkriss/stateface-rails.git"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -34,6 +35,7 @@ end
 
 group :test do
   gem 'simplecov', :require => false
+  gem "shoulda-matchers"
 end
 
 group :production do
