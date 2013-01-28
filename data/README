@@ -1,0 +1,65 @@
+Voter Registration static data files
+====================================
+
+
+instructions.yml -- State specific instructions
+-----------------------------------------------
+
+This file contains help text of state-specific instructions for filling out
+certain fields in the voter registration form.
+
+Each entry corresponds to a particular field in the registration form.
+
+Example:
+
+      - state: AL
+        name: id_number
+        help_text: Your social security number is requested (by authority of the Alabama Supreme Court 17-4-122)
+
+Each entry must have a state, name, and help_text. The state is the 2-letter
+FIPS/USPS abbreviation. The name is the name of the field element in the form.
+The help_text is a plain-text string with the instructions for that field.
+
+The list of fields that can currently accept instruction help text are:
+
+ * ethnicity
+ * id_number
+ * political_party
+
+
+state_info_en.yml -- Guidelines and information
+-----------------------------------------------
+
+This file contains detailed state-specific information regarding things like
+registration and ID requirements, early voting details, and same-day
+registration.
+
+Structurally, it is composed of entries with a slug, body, title, and children
+elements, and the children element can have a list of entries with these same
+fields, recursively.
+
+Example:
+
+      - slug: AL
+        body: "<p>Some HTML</p>"
+        title: Alabama Voter Registration
+        children:
+        - slug: reg-requirements
+          body: "<p>Some more HTML</p>"
+          title: Registration Requirements
+
+
+state_deadlines.en.json -- Deadlines for registration
+-----------------------------------------------------
+
+This file is a set of per-state entries describing the deadlines for
+registering to vote in each state.
+
+It is a JSON file with a single top-level object, where keys are the 2-letter
+FIPS/USPS abbreviation and values are stringified HTML with the text of the
+deadline information. For layout purposes, this text should be wrapped in a
+<ul><li></li></ul>. TODO: fix this
+
+Example:
+
+      "AL": "<ul><li>Postmarked/hand-delivered by: 11 days before Election Day.</li></ul>",
