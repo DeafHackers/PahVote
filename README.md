@@ -39,7 +39,7 @@ You can see a running version of the application at
 
 ## Installation
 
-    git clone git@github.com:ofa/voter-registration.git
+    git clone git@github.com:democrats/voter-registration.git
     cd voter-registration
     bundle install
     rake db:migrate
