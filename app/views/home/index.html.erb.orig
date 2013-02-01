@@ -1,11 +1,15 @@
 <div class="hero-unit">
+<<<<<<< HEAD
   <div class="hero-reg">
+=======
+>>>>>>> f04a6776b3fcd82c36d59eb7470be8bf3273f6a4
   <h1><%= t :voter_registration %></h1>
   <h2><%= t :register_to_vote_in_state %></h2>
   <%= form_tag("", :method => "GET", :class => "form-inline") do %>
     <%= label_tag t :select_a_state %>
     <%= select_tag("state", options_for_select(Guidelines.all.collect {|s| [ s.name, s.state ] })) %>
-    <%= submit_tag (t :go).titleize, :class=> "btn btn-primary" %>
+<<<<<<< HEAD
+    <%= submit_tag (t :go).titleize, :class=> "btn btn-danger" %>
   <% end %>
 </div>
 <div class="hero-logo">
@@ -23,6 +27,25 @@
   </div>
   <div class="span4 works front">
     <h1><%= (t :how_it_works).titleize %></h1>
+=======
+    <%= submit_tag (t :go).titleize, :class=> "btn btn-primary" %>
+  <% end %>
+</div>
+<div class="row">
+  <div class="span12 section-header">
+    <h1><%= (t :about).titleize %></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="span4">
+    <h2><%= (t :vote).titleize %></h2>
+    <p>We need more Americans to have a say in their government, not just the special interests.
+    That's why we should be taking down roadblocks to voting.
+    We believe in an America where everybody can make their voices heard.</p>
+  </div>
+  <div class="span4">
+    <h2><%= (t :how_it_works).titleize %></h2>
+>>>>>>> f04a6776b3fcd82c36d59eb7470be8bf3273f6a4
     <ol>
       <li>Choose a state</li>
       <li>Read the guidelines for the state</li>
@@ -31,6 +54,7 @@
       <li>Add a stamp and mail in your form</li>
     </ol>
   </div>
+<<<<<<< HEAD
   <div class="span4 front">
     <h1><%= (t :state_guidelines).titleize %></h1>
     <p>Make sure you check out the <%= link_to 'guidelines', guidelines_path %> for your state</p>
@@ -103,5 +127,10 @@
   </div>
   <div id="logo" align="center">
     <a href="http://convorelay.com" target="blank"><img src="https://s3.amazonaws.com/pahvote/Convo+Logo.png" alt="Convo Logo" /></a>
+=======
+  <div class="span4">
+    <h2><%= (t :state_guidelines).titleize %></h2>
+    <p>Make sure you checkout the <%= link_to 'guidelines', guidelines_path %> for your state</p>
+>>>>>>> f04a6776b3fcd82c36d59eb7470be8bf3273f6a4
   </div>
 </div>
