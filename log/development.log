@@ -4767,3 +4767,29 @@ Served asset /register.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-30 14:33:44 -0700
 Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-31 19:31:40 -0800
+Processing by HomeController#index as HTML
+  [1m[36mGuidelines Load (1.4ms)[0m  [1mSELECT "guidelines".* FROM "guidelines" ORDER BY name[0m
+  Rendered home/index.html.erb within layouts/application (114.5ms)
+Compiled propublica/stateface.css  (0ms)  (pid 66377)
+Compiled bootstrap_and_overrides.css  (165ms)  (pid 66377)
+Completed 500 Internal Server Error in 390ms
+
+ActionView::Template::Error (missing closing `}`
+  (in /Users/ewilliam/Projects/Rails/sandbox/PahVote/app/assets/stylesheets/bootstrap_and_overrides.css.less.orig)):
+    2: <html>
+    3: <head>
+    4:   <title><%= t :pahvote %></title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8:   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2837899397907731726_70327530164280'
+
+
+  Rendered /Users/ewilliam/.rvm/gems/ruby-1.9.3-p327@sandbox/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/ewilliam/.rvm/gems/ruby-1.9.3-p327@sandbox/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/ewilliam/.rvm/gems/ruby-1.9.3-p327@sandbox/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.8ms)
